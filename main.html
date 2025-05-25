@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мир сказок</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background" id="background">
+  
+  
+  <img
+    src="materials/image/button.png"
+    id="animatedButton"
+    class="image-button"
+    onclick="openVideo()">
+
+   <div id="videoOverlay" class="overlay" onclick="closeVideo(event)">
+    <video id="videoPlayer" class="video-popup" controls>
+      <source src="materials/video/Пролог.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+
+    <img
+    src="materials/image/button.png"
+    id="animatedButton2"
+    class="image-button"
+    onclick="openGame_Guess_the_animal()">
+
+     <img
+    src="materials/image/button.png"
+    id="animatedButton3"
+    class="image-button">
+
+  <!-- Игра "Угадай животное" -->
+  <div id="overlay_game_Guess_the_animal" class="overlay">
+
+    <img
+    src="materials/image/game1_Guess the animal.jpg"
+    id="game_Guess_the_animal"
+    class="game1_guess_the_animal">
+
+    <div class="no_centering">
+      <img src="materials/image/rock.png" id="rock" class="rock">
+      <img src="materials/image/live.png" id="live1" class="lives" 
+      style=" position: absolute; 
+      top: 100px;
+      right: 470px;
+      width: 100px;
+      height: 100px;">
+      <img src="materials/image/live.png" id="live2" class="lives" 
+      style=" position: absolute; 
+      top: 100px;
+      right: 540px;
+      width: 100px;
+      height: 100px;">
+      <img src="materials/image/live.png" id="live3" class="lives" 
+      style=" position: absolute; 
+      top: 100px;
+      right: 610px;
+      width: 100px;
+      height: 100px;">
+      <img src="materials/image/cherepacha.png" id="img_cherepacha" class="animal">
+
+       <img
+        src="materials/image/buttonClose.png"
+        id="close_game_Button"
+        class="close_game"
+        onclick="close_Game()">
+      
+      <button id="music1" class="play_music" onclick="play_music('cherepacha')"></button>
+      <button id="music1_0" class="stop_music" onclick="stop_music('cherepacha')"></button>
+      <audio id="cherepacha" loop>
+        <source src="materials/music/Черепахи.mp3" />
+      </audio>
+
+      <div class="choice">
+        <button id="bird" class="variant" 
+          style="background-image: url('materials/image/bird.png') ;background-color: rgba(0, 0, 0, 0);"
+          onclick="check('bird','cherepacha_vibor')"></button>
+
+        <button id="cherepacha_vibor" class="variant" 
+          style="background-image: url('materials/image/cherepacha_vibor.png') ;background-color: rgba(0, 0, 0, 0);"
+          onclick="check('cherepacha_vibor','cherepacha_vibor')"></button>
+
+        <button id="gys" class="variant" 
+          style="background-image: url('materials/image/gys.png') ;background-color: rgba(0, 0, 0, 0);"
+          onclick="check('gys','cherepacha_vibor')"></button>
+
+        <button id="ylitka" class="variant" 
+        style="background-image: url('materials/image/ylitka.png') ;background-color: rgba(0, 0, 0, 0);"
+        onclick="check('ylitka','cherepacha_vibor')"></button></button>
+      </div>
+      </div>
+
+      <audio id="wrong">
+        <source src="materials/music/wrong.mp3" />
+      </audio>
+      <audio id="right">
+        <source src="materials/music/right.mp3" />
+      </audio>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</div>
+</body>
+</html>
